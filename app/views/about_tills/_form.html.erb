@@ -1,0 +1,22 @@
+<%= form_for(@about_till) do |f| %>
+  <% if @about_till.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@about_till.errors.count, "error") %> prohibited this about_till from being saved:</h2>
+
+      <ul>
+      <% @about_till.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :about %><br />
+    <%= f.text_area :about %>
+  </div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

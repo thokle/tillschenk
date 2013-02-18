@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>About:</b>
+  <%= @about_till.about %>
+</p>
+
+<p>
+  <b>Pic:</b>
+  <%= @about_till.pic %>
+</p>
+
+
+<%= link_to 'Edit', edit_about_till_path(@about_till) %> |
+<%= link_to 'Back', about_tills_path %>

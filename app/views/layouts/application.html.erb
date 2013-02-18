@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TillSchenk</title>
+ <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+<body>		
+	<header id="branding">
+		<div class="col-width">		
+			<hgroup id="logo">
+			<div class="tilllogo">
+				<%= image_tag('Logo_Trikot.jpg' , :size => '300x130')%>
+			</div>
+			</hgroup>			
+			<nav id="navigation">
+				<div>
+					<%= render "#{controller_name}" + "_navigation" %>	
+				
+				</div>
+ 			</nav>
+		</div>
+	</header>
+	<div id="main">
+		<div class="col-width"> 			   
+				<%= yield %>
+		</div>
+	</div>
+	<footer id="colophon">
+		<div class="col-width">
+		
+			</div>		
+		</div>	
+	</footer>
+</body>
+</html>

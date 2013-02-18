@@ -1,0 +1,25 @@
+<h1>Listing about_tills</h1>
+
+<table>
+  <tr>
+    <th>About</th>
+    <th>Pic</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @about_tills.each do |about_till| %>
+  <tr>
+    <td><%= about_till.about %></td>
+    <td><%= about_till.pic %></td>
+    <td><%= link_to 'Show', about_till %></td>
+    <td><%= link_to 'Edit', edit_about_till_path(about_till) %></td>
+    <td><%= link_to 'Destroy', about_till, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New About till', new_about_till_path %>
