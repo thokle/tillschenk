@@ -22,6 +22,8 @@ GEM
       activesupport (= 3.2.11)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-postgresql-adapter (0.0.1)
+      pg
     activeresource (3.2.11)
       activemodel (= 3.2.11)
       activesupport (= 3.2.11)
@@ -31,6 +33,7 @@ GEM
     arel (3.0.2)
     blankslate (2.1.2.4)
     builder (3.0.4)
+    cancan (1.6.9)
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -70,6 +73,7 @@ GEM
     multi_json (1.5.0)
     mysql2 (0.3.11)
     nifty-generators (0.4.6)
+    pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.4)
     rack-cache (1.2)
@@ -121,6 +125,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-postgresql-adapter
+  cancan
   carrierwave
   coffee-rails (~> 3.2.1)
   jbuilder
@@ -131,6 +137,7 @@ DEPENDENCIES
   mocha
   mysql2
   nifty-generators
+  pg
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
   thor

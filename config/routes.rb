@@ -1,6 +1,17 @@
 
 TillSchenk::Application.routes.draw do
   
+  resources :services
+
+
+  resources :events
+
+
+  get "comments/create"
+
+  resources :blogs
+
+
   resources :posts
 
 

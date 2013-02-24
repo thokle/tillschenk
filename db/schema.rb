@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130210193642) do
+ActiveRecord::Schema.define(:version => 20130220195253) do
 
   create_table "about_tills", :force => true do |t|
     t.text     "about"
@@ -19,14 +19,31 @@ ActiveRecord::Schema.define(:version => 20130210193642) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "comments", :force => true do |t|
-    t.string   "name"
-    t.string   "url"
-    t.string   "email"
-    t.string   "comment"
+  create_table "blogs", :force => true do |t|
+    t.string   "author"
+    t.string   "title"
+    t.string   "text"
+    t.string   "link"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "post_id"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "body"
+    t.string   "weburl"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "blog_id"
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "type"
+    t.string   "name"
+    t.string   "picture"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "galleries", :force => true do |t|
@@ -45,14 +62,6 @@ ActiveRecord::Schema.define(:version => 20130210193642) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "gallery_id"
-  end
-
-  create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.string   "author"
-    t.string   "text"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
 end
