@@ -20,6 +20,7 @@ gem "jquery-fileupload-rails", "~> 0.4.0"
 gem 'mocha', :group => :test
 gem 'pg'
 gem 'cancan'
+gem 'thin'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

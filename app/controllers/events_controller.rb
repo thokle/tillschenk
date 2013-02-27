@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   
-  $var = "name"
+
   def index
     @events = Event.all
 
